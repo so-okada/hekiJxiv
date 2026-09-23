@@ -1,8 +1,9 @@
 # Application Info
 
 hekiJxiv delivers [Jxiv](https://jxiv.jst.go.jp/) daily new preprints
-and daily summaries by bluesky posts. heki means azure (碧/へき) in Japanese. We use python3 scripts with atproto.
-hekiJxiv is not affiliated with JST.
+and daily summaries by bluesky posts. heki means azure (碧/へき) in
+Japanese. We use python3 scripts with atproto.  hekiJxiv is not
+affiliated with Jxiv or JST.
 
 
 ## Setup
@@ -239,7 +240,8 @@ options:
 
 ## Bot List
 
-* 
+* [https://bsky.app/profile/hekijxiv-ppbot.bsky.social](https://bsky.app/profile/hekijxiv-ppbot.bsky.social):
+  Jxiv Preprint announcement bot (unofficial)
 
 
 ## Author
