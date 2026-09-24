@@ -1,8 +1,8 @@
 # Application Info
 
 hekiJxiv delivers [Jxiv](https://jxiv.jst.go.jp/) daily new preprints
-and daily summaries by bluesky posts. heki means azure (碧/へき) in
-Japanese. We use python3 scripts with atproto.  hekiJxiv is not
+and daily summaries by Bluesky posts. heki means azure (碧/へき) in
+Japanese. We use Python 3 scripts with atproto.  hekiJxiv is not
 affiliated with Jxiv or JST.
 
 
@@ -33,16 +33,16 @@ affiliated with Jxiv or JST.
 * Configure switches.json and logfiles.json in the tests directory
   for your settings.
 
-	- switches.json specifies bluesky access keys and whether to use
+	- switches.json specifies Bluesky access keys and whether to use
 	new submissions and daily summaries by hekiJxiv.  Each top level
 	key is a label of one bot.
 
     - logfiles.json indicates log file locations for post summaries
 	and posts.  You can check their formats by
-	ppbot_post_summaries.csv and ppbot_posts.csv in the
-	tests/logfiles directory.  hekiJxiv needs a post log.  It is
-	what keeps a preprint from being announced twice, and it keeps
-		the daily summary from being posted twice a day.
+	your-ppbot_post_summaries.csv and your-ppbot_posts.csv in the
+	tests/logfiles directory.  hekiJxiv needs a post log, which
+	keeps a preprint from being announced twice.  The summary log
+	keeps the daily summary from being posted twice a day.
 		Live posting requires nonempty `post_log` and `username` settings,
 		and `post_summary_log` when summaries are enabled. A configured
 		CSV file may be created by the first live run.
@@ -50,7 +50,7 @@ affiliated with Jxiv or JST.
 * Configure hekiJxiv_variables.py for your settings.
 
    - hekiJxiv_variables.py assigns format parameters for hekiJxiv
-   posts and access frequencies for JaLC and bluesky.
+   posts and access frequencies for JaLC and Bluesky.
 
 ## Notes
 
@@ -98,7 +98,7 @@ affiliated with Jxiv or JST.
 
 * A DOI joins the post log only once it has been announced.  Not when
   it is walked, and not when its metadata arrives.  A run that dies
-  between the two, or a bluesky call that fails, leaves the preprint to
+  between the two, or a Bluesky call that fails, leaves the preprint to
   be announced next time.  A DOI whose `/dois/` fetch returns 404 is
   left unlogged on purpose: a DOI can be registered before its preprint
   clears screening, and it is announced when it publishes.
@@ -119,7 +119,7 @@ affiliated with Jxiv or JST.
   English titles and author names, language tagged, and neither is
   guaranteed.  hekiJxiv posts the original: Japanese where a record
   has it, English otherwise, and whatever the record does carry as a
-  last resort.  The bluesky language tag follows the title the post
+  last resort.  The Bluesky language tag follows the title the post
   actually quotes rather than a fixed default.
 
 * Outputs of hekiJxiv can differ from the Jxiv web pages. This can be
@@ -251,10 +251,10 @@ So Okada, so.okada@gmail.com, https://so-okada.github.io/
 ## Motivation
 This is an open-science practice
 (see https://github.com/so-okada/twXiv#motivation).  Since 2013-04, the
-author has been running twitter bots for all arXiv math categories.
-Since 2023-01, the author has been running mastodon bots for
+author has been running Twitter bots for all arXiv math categories.
+Since 2023-01, the author has been running Mastodon bots for
 all arXiv categories with [toXiv](https://github.com/so-okada/toXiv).
-Since 2025-02, the author has been running bluesky bots for arXiv
+Since 2025-02, the author has been running Bluesky bots for arXiv
 categories with [bXiv](https://github.com/so-okada/bXiv).
 Since 2026-07, [aozoraSciELO](https://github.com/so-okada/aozoraSciELO)
 extends the practice to
