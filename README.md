@@ -65,7 +65,7 @@ affiliated with Jxiv or JST.
   DOIs, bibliographic data, and URIs for any purpose, subject to the
   other provisions of the terms
   (「利用者は、DOI、書誌データ及びURIを利用目的及び態様を問わず自由に
-  利用できますが、本規約の定めに従うものとします」).  Article 3 defines the
+  利用できますが、本規約の定めに従わなければなりません」).  Article 3 defines the
   bibliographic data (書誌データ)
   of a DOI-registered content item as its title, authors, journal
   name, volume and issue, first page, ISBN, ISSN, and the like
