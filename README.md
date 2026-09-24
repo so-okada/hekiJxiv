@@ -64,14 +64,16 @@ affiliated with Jxiv or JST.
   govern what hekiJxiv may repost.  Article 5.2 grants free use of
   DOIs, bibliographic data, and URIs for any purpose, subject to the
   other provisions of the terms
-  (「利用者は、DOI、書誌データ及びURIを利用目的及び態様を問わず自由に
-  利用できますが、本規約の定めに従わなければなりません」).  Article 3 defines the
-  bibliographic data (書誌データ)
-  of a DOI-registered content item as its title, authors, journal
-  name, volume and issue, first page, ISBN, ISSN, and the like
-  (「DOIを付与されたコンテンツに係る標題、著者、収録ジャーナル名、
-  収録巻・号、開始ページ、ISBN、ISSN等」).  See
-  Article 5.3 for abstracts.
+  (「利用者は、DOI、書誌データ及びURIを利用目的及び態様を問わず自由に利用できますが、本規約の定めに従わなければなりません」).
+  Article 3 defines the following terms: JaLC provides users, through the
+  service, with "DOIs; the title, authors, journal name, volume and
+  issue, first page, ISBN, ISSN, etc. of content assigned a DOI
+  (hereinafter collectively referred to as 'Bibliographic Data');
+  information identifying the location of content, such as its
+  Internet address (URL) (Uniform Resource Identifier; hereinafter
+  referred to as 'URI'); and abstracts of academic papers
+  (hereinafter referred to as 'Paper Abstracts')"
+  (「JaLCは、DOI、DOIを付与されたコンテンツに係る標題、著者、収録ジャーナル名、収録巻・号、開始ページ、ISBN、ISSN等(以下「書誌データ」と総称します。)、インターネットアドレス(URL)等のコンテンツの所在を特定する情報(Uniform Resource Identifier。以下「URI」といいます。)及び学術論文に係る抄録(以下「論文抄録」といいます。)を、本サービスを通して利用者に提供します」).
 
 * API usage.  Metadata comes from the provided method, the Japan Link
   Center (JaLC)
