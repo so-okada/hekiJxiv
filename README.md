@@ -70,8 +70,8 @@ affiliated with Jxiv or JST.
   of a DOI-registered content item as its title, authors, journal
   name, volume and issue, first page, ISBN, ISSN, and the like
   (「DOIを付与されたコンテンツに係る標題、著者、収録ジャーナル名、
-  収録巻・号、開始ページ、ISBN、ISSN等」) except abstracts covered in
-  Article 5.3.
+  収録巻・号、開始ページ、ISBN、ISSN等」).  See
+  Article 5.3 for abstracts.
 
 * API usage.  Metadata comes from the provided method, the Japan Link
   Center (JaLC)
