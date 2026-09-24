@@ -70,9 +70,8 @@ affiliated with Jxiv or JST.
   of a DOI-registered content item as its title, authors, journal
   name, volume and issue, first page, ISBN, ISSN, and the like
   (「DOIを付与されたコンテンツに係る標題、著者、収録ジャーナル名、
-  収録巻・号、開始ページ、ISBN、ISSN等」).  That
-  grant is what covers the titles, author names, dates, and links in
-  hekiJxiv posts, except abstracts covered in Article 5.3.
+  収録巻・号、開始ページ、ISBN、ISSN等」) except abstracts covered in
+  Article 5.3.
 
 * API usage.  Metadata comes from the provided method, the Japan Link
   Center (JaLC)
