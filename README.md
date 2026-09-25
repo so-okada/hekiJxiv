@@ -105,9 +105,8 @@ affiliated with Jxiv or JST.
 * A daily summary is posted once per UTC day per bot, and the summary
   log is what marks a day as already done.  When retrieval fails
   outright and no summary has gone out yet that day, hekiJxiv still
-  posts a summary reporting no new preprints, so that a silent failure
-  does not look like a quiet day.  A bot with `summaries` of 0 reports
-  neither.
+  posts a summary reporting no new preprints.  A bot with `summaries`
+  of 0 reports neither.
 
 
 ## Usage
