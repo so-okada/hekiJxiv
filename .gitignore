@@ -1,0 +1,19 @@
+# ignore everything, then allow the release files
+*
+
+!.gitignore
+!*.py
+!README.md
+!LICENSE
+!tests/
+!tests/*.py
+!tests/*.json
+!tests/logfiles/
+!tests/logfiles/*.csv
+
+# re-ignore drafts and editor junk 
+ch_*
+20*
+.#*
+*~
+\#*

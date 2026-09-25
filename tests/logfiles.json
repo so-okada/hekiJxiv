@@ -1,0 +1,7 @@
+{
+    "Jxiv": {
+        "username": "your-ppbot.bsky.social",
+        "post_summary_log": "tests/logfiles/your-ppbot_post_summaries.csv",
+        "post_log": "tests/logfiles/your-ppbot_posts.csv"
+    }
+}
