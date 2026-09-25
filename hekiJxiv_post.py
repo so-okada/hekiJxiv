@@ -29,13 +29,25 @@ def main(switches, logfiles, pt_mode, max_post=None, num_last_days=None):
     summary_mode = {}
 
     for cat in switches:
+        newsubmission_mode[cat] = int(switches[cat]["newsubmissions"])
+        # summaries default to on
+        summary_mode[cat] = int(switches[cat].get("summaries", 1))
+
+    # a summary counts what the post log does not hold, and only posts
+    # fill the post log; without posts the same preprints would be
+    # counted again each day of the window.
+    summary_only = [cat for cat in switches
+                    if summary_mode[cat] and not newsubmission_mode[cat]]
+    if summary_only:
+        raise Exception(
+            "summaries need newsubmissions; set newsubmissions to 1 or "
+            + "summaries to 0 for: " + ", ".join(summary_only))
+
+    for cat in switches:
         # no login in stdout mode
         client_dict[cat] = atproto_client(switches[cat]) if pt_mode else None
         update_dict[cat] = sleep_and_retry(
             rate_limited(post_updates, an_hour)(update))
-        newsubmission_mode[cat] = int(switches[cat]["newsubmissions"])
-        # summaries default to on
-        summary_mode[cat] = int(switches[cat].get("summaries", 1))
 
     # retrieval and new submissions, one bot after another.
     for i, cat in enumerate(switches):
@@ -217,6 +229,13 @@ def newentries(
 ):
     print("getting new entries for " + cat)
 
+    # summaries without new submissions are rejected in main, so this
+    # label posts nothing at all.
+    if not newsubmission_mode:
+        print("nothing to do for " + cat
+              + ": newsubmissions and summaries are both 0")
+        return None
+
     if pt_mode:
         required = ["post_log", "username"]
         if summary_mode:
@@ -265,15 +284,6 @@ def newentries(
             ptext = intro(time_now, 0, cat)
             update_limited(
                 logfiles, cat, client, "0", "", ptext, pt_mode,
-                [post_language_default])
-        return None
-
-    if not newsubmission_mode:
-        if summary_mode:
-            total = len(entries.newsubmissions)
-            ptext = intro(utcnow(), total, cat)
-            update_limited(
-                logfiles, cat, client, str(total), "", ptext, pt_mode,
                 [post_language_default])
         return None
 
